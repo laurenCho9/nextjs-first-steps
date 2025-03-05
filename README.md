@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js 첫걸음
 
-## Getting Started
+25.03.03 ~
 
-First, run the development server:
+## 개발 환경 세팅
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. 설치
+
+```
+npx create-next-app@latest
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+혹은
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+yarn create next-app .
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+❗️왜 yarn은 @latest 를 안붙이지?
+yarn create 자체가 최신 버전을 자동으로 가져오기 때문에 따로 명시하지 않아도 된다.
 
-## Learn More
+_역시 yarn.._
 
-To learn more about Next.js, take a look at the following resources:
+2. 실행
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+react vite와는 다르게 yarn 설치 필요없이
+바로 yarn dev로 로컬호스트3000번 포트가 열린다.
 
-## Deploy on Vercel
+## 정적 라우팅
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+버전 15.2.0 기준
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. src/app폴더 안에
+2. router(경로)명으로 사용할 이름을 폴더명으로 지정
+3. 그 안에 파일을 추가한다.
+
+> ❗️반드시 파일명을 page 지정해줘야 적용된다.
+> <br />
+> 경로: http://localhost:3000/폴더명
+
+> ➕ 중첩 라우팅을 하고 싶다면?
+> <br />
+> 폴더 안에 폴더를 추가하고 그 안에 page 파일을 생성하면 된다.
+> <br />
+> 경로: http://localhost:3000/폴더명/폴더명
