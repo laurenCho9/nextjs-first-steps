@@ -100,3 +100,10 @@ export async function generateStaticParams() {
 > [...slug] 뒤에 오는 배열까지 전부 미리 생성
 
 > #### ❗️ 대괄호가 둘로 묶여있으면 [[...slug]] 있어도 되고 없어도 되는 옵셔널의 의미
+
+## not-found.js
+
+1. src/app폴더 안에
+2. not-found 라는 파일명으로 된 파일을 하나 만든다.
+3. 13.3 버전 이후에는 글로벌하게 일치하지 않는 URL을 자동처리해준다.
+   Home 컴포넌트에서 notFound(); 호출하고 경로 지정해주는 것은 불필요해짐.
