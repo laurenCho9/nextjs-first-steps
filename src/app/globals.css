@@ -44,3 +44,17 @@ nav a {
 .products-nav a {
   padding: 0 8px;
 }
+
+.products-item-nav li {
+  width: 80px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 6px;
+}
+.products-item-nav a {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: pink;
+}

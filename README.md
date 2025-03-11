@@ -188,3 +188,52 @@ export default function ProductsLayout({
   );
 }
 ```
+
+## Link
+
+반드시 a 태그가 아닌 Link 태그를 사용해줘야 한다고 한다.(a 태그 써도 잘 돌아가긴 함)
+
+예시1)
+경로 src/app/layout.tsx
+
+```tsx
+<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+  <header>
+    <h1>헤더</h1>
+    <nav>
+      <Link href="/products">Products</Link>
+      <Link href="/contact">Contact</Link>
+      <Link href="/about">About</Link>
+    </nav>
+  </header>
+  {children}
+</body>
+```
+
+> ❗️ 반드시 a 태그가 아닌 Link 태그를 사용해줘야 한다고 한다.(a 태그 써도 잘 돌아가긴 함)
+
+예시2)
+경로 src/app/products/page.tsx
+
+```tsx
+import Link from "next/link";
+
+const products = ["shirt", "pants", "skirt", "shose"];
+
+const ProductsPage = () => {
+  return (
+    <>
+      <h1>제품소개페이지</h1>
+      <ul className="products-item-nav">
+        {products.map((product, index) => (
+          <li key={index}>
+            <Link href={`products/${product}`}>{product}</Link>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+export default ProductsPage;
+```

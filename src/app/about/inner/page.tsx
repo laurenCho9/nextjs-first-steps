@@ -1,9 +1,9 @@
-const page = () => {
+const AboutInner = () => {
   return (
     <>
-      <h1>page Component</h1>
+      <h1>AboutInner Component</h1>
     </>
   );
 };
 
-export default page;
+export default AboutInner;
