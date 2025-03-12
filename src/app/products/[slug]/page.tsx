@@ -4,6 +4,12 @@ type Props = {
   };
 };
 
+export function generateMetadata({ params }: Props) {
+  return {
+    title: `제품의 이름: ${params.slug}`,
+  };
+}
+
 const DynamicRouter = ({ params }: Props) => {
   return <div>{params.slug} 제품설명페이지</div>;
 };

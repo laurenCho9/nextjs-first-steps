@@ -237,3 +237,31 @@ const ProductsPage = () => {
 
 export default ProductsPage;
 ```
+
+## Metadata(SEO 최적화)
+
+예시1)
+전체 페이지에 meta 태그 지정
+경로 src/app/layout.tsx
+
+```tsx
+export const metadata: Metadata = {
+  title: "멋진 제품 사이트 | 전체 제품 확인",
+  description: "멋진 제품을 확인해 보세요.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+```
+
+예시2)
+특정 페이지에 특정 meta 태그 지정
+경로 src/app/products/[slug]/page.tsx
+
+```tsx
+export function generateMetadata({ params }: Props) {
+  return {
+    title: `제품의 이름: ${params.slug}`,
+  };
+}
+```
